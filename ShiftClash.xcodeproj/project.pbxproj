@@ -6,6 +6,17 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		55E1A14130732F0A000ECF0E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E1A14030732F0A000ECF0E /* WidgetKit.framework */; };
+		55E1A14330732F0A000ECF0E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E1A14230732F0A000ECF0E /* SwiftUI.framework */; };
+		55E1A15230732F0A000ECF0E /* ShiftClashWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 55E1A13E30732F0A000ECF0E /* ShiftClashWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		55E1A16730732F5B000ECF0E /* ShiftClashShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 55E1A15D30732F5B000ECF0E /* ShiftClashShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		55E1A17430733282000ECF0E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17330733282000ECF0E /* AppGroup.swift */; };
+		55E1A17530733282000ECF0E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17330733282000ECF0E /* AppGroup.swift */; };
+		55E1A17630733282000ECF0E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17330733282000ECF0E /* AppGroup.swift */; };
+		55E1A17730733282000ECF0E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17330733282000ECF0E /* AppGroup.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		55E1A10B3071DCB5000ECF0E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +32,63 @@
 			remoteGlobalIDString = 55E1A0FC3071DCB4000ECF0E;
 			remoteInfo = ShiftClash;
 		};
+		55E1A15030732F0A000ECF0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55E1A0F53071DCB4000ECF0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55E1A13D30732F0A000ECF0E;
+			remoteInfo = ShiftClashWidgetExtension;
+		};
+		55E1A16530732F5B000ECF0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55E1A0F53071DCB4000ECF0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55E1A15C30732F5B000ECF0E;
+			remoteInfo = ShiftClashShare;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		55E1A15730732F0A000ECF0E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				55E1A15230732F0A000ECF0E /* ShiftClashWidgetExtension.appex in Embed Foundation Extensions */,
+				55E1A16730732F5B000ECF0E /* ShiftClashShare.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		55E1A0FD3071DCB4000ECF0E /* ShiftClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E1A10A3071DCB5000ECF0E /* ShiftClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiftClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E1A1143071DCB5000ECF0E /* ShiftClashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiftClashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E1A13E30732F0A000ECF0E /* ShiftClashWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiftClashWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E1A14030732F0A000ECF0E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		55E1A14230732F0A000ECF0E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		55E1A15830732F33000ECF0E /* ShiftClashWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiftClashWidgetExtension.entitlements; sourceTree = "<group>"; };
+		55E1A15D30732F5B000ECF0E /* ShiftClashShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiftClashShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E1A17330733282000ECF0E /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		55E1A15330732F0A000ECF0E /* Exceptions for "ShiftClashWidget" folder in "ShiftClashWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 55E1A13D30732F0A000ECF0E /* ShiftClashWidgetExtension */;
+		};
+		55E1A16830732F5B000ECF0E /* Exceptions for "ShiftClashShare" folder in "ShiftClashShare" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 55E1A15C30732F5B000ECF0E /* ShiftClashShare */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		55E1A0FF3071DCB4000ECF0E /* ShiftClash */ = {
@@ -43,6 +104,22 @@
 		55E1A1173071DCB5000ECF0E /* ShiftClashUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ShiftClashUITests;
+			sourceTree = "<group>";
+		};
+		55E1A14430732F0A000ECF0E /* ShiftClashWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				55E1A15330732F0A000ECF0E /* Exceptions for "ShiftClashWidget" folder in "ShiftClashWidgetExtension" target */,
+			);
+			path = ShiftClashWidget;
+			sourceTree = "<group>";
+		};
+		55E1A15E30732F5B000ECF0E /* ShiftClashShare */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				55E1A16830732F5B000ECF0E /* Exceptions for "ShiftClashShare" folder in "ShiftClashShare" target */,
+			);
+			path = ShiftClashShare;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -63,15 +140,32 @@
 			files = (
 			);
 		};
+		55E1A13B30732F0A000ECF0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				55E1A14330732F0A000ECF0E /* SwiftUI.framework in Frameworks */,
+				55E1A14130732F0A000ECF0E /* WidgetKit.framework in Frameworks */,
+			);
+		};
+		55E1A15A30732F5B000ECF0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		55E1A0F43071DCB4000ECF0E = {
 			isa = PBXGroup;
 			children = (
+				55E1A16D307331D2000ECF0E /* Shared */,
+				55E1A15830732F33000ECF0E /* ShiftClashWidgetExtension.entitlements */,
 				55E1A0FF3071DCB4000ECF0E /* ShiftClash */,
 				55E1A10D3071DCB5000ECF0E /* ShiftClashTests */,
 				55E1A1173071DCB5000ECF0E /* ShiftClashUITests */,
+				55E1A14430732F0A000ECF0E /* ShiftClashWidget */,
+				55E1A15E30732F5B000ECF0E /* ShiftClashShare */,
+				55E1A13F30732F0A000ECF0E /* Frameworks */,
 				55E1A0FE3071DCB4000ECF0E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,8 +176,51 @@
 				55E1A0FD3071DCB4000ECF0E /* ShiftClash.app */,
 				55E1A10A3071DCB5000ECF0E /* ShiftClashTests.xctest */,
 				55E1A1143071DCB5000ECF0E /* ShiftClashUITests.xctest */,
+				55E1A13E30732F0A000ECF0E /* ShiftClashWidgetExtension.appex */,
+				55E1A15D30732F5B000ECF0E /* ShiftClashShare.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		55E1A13F30732F0A000ECF0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55E1A14030732F0A000ECF0E /* WidgetKit.framework */,
+				55E1A14230732F0A000ECF0E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55E1A16D307331D2000ECF0E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				55E1A17030733200000ECF0E /* Repositories */,
+				55E1A16F307331F6000ECF0E /* Persistence */,
+				55E1A16E307331E6000ECF0E /* Domain */,
+				55E1A17330733282000ECF0E /* AppGroup.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		55E1A16E307331E6000ECF0E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		55E1A16F307331F6000ECF0E /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		55E1A17030733200000ECF0E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,8 +233,13 @@
 				55E1A0F93071DCB4000ECF0E /* Sources */,
 				55E1A0FA3071DCB4000ECF0E /* Frameworks */,
 				55E1A0FB3071DCB4000ECF0E /* Resources */,
+				55E1A15730732F0A000ECF0E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
+			);
+			dependencies = (
+				55E1A15130732F0A000ECF0E /* PBXTargetDependency */,
+				55E1A16630732F5B000ECF0E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				55E1A0FF3071DCB4000ECF0E /* ShiftClash */,
@@ -149,6 +291,42 @@
 			productReference = 55E1A1143071DCB5000ECF0E /* ShiftClashUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		55E1A13D30732F0A000ECF0E /* ShiftClashWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55E1A15430732F0A000ECF0E /* Build configuration list for PBXNativeTarget "ShiftClashWidgetExtension" */;
+			buildPhases = (
+				55E1A13A30732F0A000ECF0E /* Sources */,
+				55E1A13B30732F0A000ECF0E /* Frameworks */,
+				55E1A13C30732F0A000ECF0E /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				55E1A14430732F0A000ECF0E /* ShiftClashWidget */,
+			);
+			name = ShiftClashWidgetExtension;
+			productName = ShiftClashWidgetExtension;
+			productReference = 55E1A13E30732F0A000ECF0E /* ShiftClashWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		55E1A15C30732F5B000ECF0E /* ShiftClashShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55E1A16930732F5B000ECF0E /* Build configuration list for PBXNativeTarget "ShiftClashShare" */;
+			buildPhases = (
+				55E1A15930732F5B000ECF0E /* Sources */,
+				55E1A15A30732F5B000ECF0E /* Frameworks */,
+				55E1A15B30732F5B000ECF0E /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				55E1A15E30732F5B000ECF0E /* ShiftClashShare */,
+			);
+			name = ShiftClashShare;
+			productName = ShiftClashShare;
+			productReference = 55E1A15D30732F5B000ECF0E /* ShiftClashShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,6 +348,12 @@
 						CreatedOnToolsVersion = 27.0;
 						TestTargetID = 55E1A0FC3071DCB4000ECF0E;
 					};
+					55E1A13D30732F0A000ECF0E = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					55E1A15C30732F5B000ECF0E = {
+						CreatedOnToolsVersion = 27.0;
+					};
 				};
 			};
 			buildConfigurationList = 55E1A0F83071DCB4000ECF0E /* Build configuration list for PBXProject "ShiftClash" */;
@@ -189,6 +373,8 @@
 				55E1A0FC3071DCB4000ECF0E /* ShiftClash */,
 				55E1A1093071DCB5000ECF0E /* ShiftClashTests */,
 				55E1A1133071DCB5000ECF0E /* ShiftClashUITests */,
+				55E1A13D30732F0A000ECF0E /* ShiftClashWidgetExtension */,
+				55E1A15C30732F5B000ECF0E /* ShiftClashShare */,
 			);
 		};
 /* End PBXProject section */
@@ -209,22 +395,46 @@
 			files = (
 			);
 		};
+		55E1A13C30732F0A000ECF0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		55E1A15B30732F5B000ECF0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55E1A0F93071DCB4000ECF0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				55E1A17430733282000ECF0E /* AppGroup.swift in Sources */,
 			);
 		};
 		55E1A1063071DCB5000ECF0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				55E1A17530733282000ECF0E /* AppGroup.swift in Sources */,
 			);
 		};
 		55E1A1103071DCB5000ECF0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+			);
+		};
+		55E1A13A30732F0A000ECF0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				55E1A17630733282000ECF0E /* AppGroup.swift in Sources */,
+			);
+		};
+		55E1A15930732F5B000ECF0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				55E1A17730733282000ECF0E /* AppGroup.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */
@@ -239,6 +449,16 @@
 			isa = PBXTargetDependency;
 			target = 55E1A0FC3071DCB4000ECF0E /* ShiftClash */;
 			targetProxy = 55E1A1153071DCB5000ECF0E /* PBXContainerItemProxy */;
+		};
+		55E1A15130732F0A000ECF0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55E1A13D30732F0A000ECF0E /* ShiftClashWidgetExtension */;
+			targetProxy = 55E1A15030732F0A000ECF0E /* PBXContainerItemProxy */;
+		};
+		55E1A16630732F5B000ECF0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55E1A15C30732F5B000ECF0E /* ShiftClashShare */;
+			targetProxy = 55E1A16530732F5B000ECF0E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -369,6 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShiftClash/ShiftClash.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WVMW9Y3Y82;
@@ -386,6 +607,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shashanknayak12.ShiftClash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -401,6 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShiftClash/ShiftClash.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WVMW9Y3Y82;
@@ -418,6 +641,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shashanknayak12.ShiftClash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -512,6 +736,130 @@
 			};
 			name = Release;
 		};
+		55E1A15530732F0A000ECF0E /* Debug configuration for PBXNativeTarget "ShiftClashWidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ShiftClashWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WVMW9Y3Y82;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShiftClashWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShiftClashWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shashanknayak12.ShiftClash.ShiftClashWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55E1A15630732F0A000ECF0E /* Release configuration for PBXNativeTarget "ShiftClashWidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ShiftClashWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WVMW9Y3Y82;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShiftClashWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShiftClashWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shashanknayak12.ShiftClash.ShiftClashWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		55E1A16A30732F5B000ECF0E /* Debug configuration for PBXNativeTarget "ShiftClashShare" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShiftClashShare/ShiftClashShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WVMW9Y3Y82;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShiftClashShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShiftClashShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shashanknayak12.ShiftClash.ShiftClashShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55E1A16B30732F5B000ECF0E /* Release configuration for PBXNativeTarget "ShiftClashShare" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShiftClashShare/ShiftClashShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WVMW9Y3Y82;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShiftClashShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShiftClashShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shashanknayak12.ShiftClash.ShiftClashShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -544,6 +892,22 @@
 			buildConfigurations = (
 				55E1A1233071DCB5000ECF0E /* Debug configuration for PBXNativeTarget "ShiftClashUITests" */,
 				55E1A1243071DCB5000ECF0E /* Release configuration for PBXNativeTarget "ShiftClashUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		55E1A15430732F0A000ECF0E /* Build configuration list for PBXNativeTarget "ShiftClashWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55E1A15530732F0A000ECF0E /* Debug configuration for PBXNativeTarget "ShiftClashWidgetExtension" */,
+				55E1A15630732F0A000ECF0E /* Release configuration for PBXNativeTarget "ShiftClashWidgetExtension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		55E1A16930732F5B000ECF0E /* Build configuration list for PBXNativeTarget "ShiftClashShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55E1A16A30732F5B000ECF0E /* Debug configuration for PBXNativeTarget "ShiftClashShare" */,
+				55E1A16B30732F5B000ECF0E /* Release configuration for PBXNativeTarget "ShiftClashShare" */,
 			);
 			defaultConfigurationName = Release;
 		};
