@@ -133,11 +133,32 @@
 			);
 			target = 55E1A15C30732F5B000ECF0E /* ShiftClashShare */;
 		};
+		55E1A2173075327C000ECF0E /* Exceptions for "ShiftClash" folder in "ShiftClashTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				UseCases/AddRosteredShift.swift,
+				UseCases/DetectDeadlineClashes.swift,
+				UseCases/ScheduleAssessmentTask.swift,
+				UseCases/SubmitAssessmentTask.swift,
+			);
+			target = 55E1A1093071DCB5000ECF0E /* ShiftClashTests */;
+		};
+		55E1A21F307532A4000ECF0E /* Exceptions for "ShiftClash" folder in "ShiftClashWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				UseCases/DetectDeadlineClashes.swift,
+			);
+			target = 55E1A13D30732F0A000ECF0E /* ShiftClashWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		55E1A0FF3071DCB4000ECF0E /* ShiftClash */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				55E1A2173075327C000ECF0E /* Exceptions for "ShiftClash" folder in "ShiftClashTests" target */,
+				55E1A21F307532A4000ECF0E /* Exceptions for "ShiftClash" folder in "ShiftClashWidgetExtension" target */,
+			);
 			path = ShiftClash;
 			sourceTree = "<group>";
 		};
