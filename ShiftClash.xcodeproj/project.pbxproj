@@ -15,6 +15,42 @@
 		55E1A17530733282000ECF0E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17330733282000ECF0E /* AppGroup.swift */; };
 		55E1A17630733282000ECF0E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17330733282000ECF0E /* AppGroup.swift */; };
 		55E1A17730733282000ECF0E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17330733282000ECF0E /* AppGroup.swift */; };
+		55E1A17E307335BD000ECF0E /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17D307335BD000ECF0E /* Subject.swift */; };
+		55E1A17F307335BD000ECF0E /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17D307335BD000ECF0E /* Subject.swift */; };
+		55E1A180307335BD000ECF0E /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17D307335BD000ECF0E /* Subject.swift */; };
+		55E1A181307335BD000ECF0E /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A17D307335BD000ECF0E /* Subject.swift */; };
+		55E1A18330733675000ECF0E /* AssessmentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A18230733675000ECF0E /* AssessmentTask.swift */; };
+		55E1A18430733675000ECF0E /* AssessmentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A18230733675000ECF0E /* AssessmentTask.swift */; };
+		55E1A18530733675000ECF0E /* AssessmentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A18230733675000ECF0E /* AssessmentTask.swift */; };
+		55E1A18630733675000ECF0E /* AssessmentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A18230733675000ECF0E /* AssessmentTask.swift */; };
+		55E1A188307336C3000ECF0E /* RosteredShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A187307336C3000ECF0E /* RosteredShift.swift */; };
+		55E1A189307336C3000ECF0E /* RosteredShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A187307336C3000ECF0E /* RosteredShift.swift */; };
+		55E1A18A307336C3000ECF0E /* RosteredShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A187307336C3000ECF0E /* RosteredShift.swift */; };
+		55E1A18B307336C3000ECF0E /* RosteredShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A187307336C3000ECF0E /* RosteredShift.swift */; };
+		55E1A18D30733706000ECF0E /* DeadlineClash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A18C30733706000ECF0E /* DeadlineClash.swift */; };
+		55E1A18E30733706000ECF0E /* DeadlineClash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A18C30733706000ECF0E /* DeadlineClash.swift */; };
+		55E1A18F30733706000ECF0E /* DeadlineClash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A18C30733706000ECF0E /* DeadlineClash.swift */; };
+		55E1A19030733706000ECF0E /* DeadlineClash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A18C30733706000ECF0E /* DeadlineClash.swift */; };
+		55E1A19230733786000ECF0E /* SharedRosterMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A19130733786000ECF0E /* SharedRosterMessage.swift */; };
+		55E1A19330733786000ECF0E /* SharedRosterMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A19130733786000ECF0E /* SharedRosterMessage.swift */; };
+		55E1A19430733786000ECF0E /* SharedRosterMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A19130733786000ECF0E /* SharedRosterMessage.swift */; };
+		55E1A19530733786000ECF0E /* SharedRosterMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A19130733786000ECF0E /* SharedRosterMessage.swift */; };
+		55E1A1973074B3E9000ECF0E /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1963074B3E9000ECF0E /* ScheduleRepository.swift */; };
+		55E1A1983074B3E9000ECF0E /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1963074B3E9000ECF0E /* ScheduleRepository.swift */; };
+		55E1A1993074B3E9000ECF0E /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1963074B3E9000ECF0E /* ScheduleRepository.swift */; };
+		55E1A19A3074B3E9000ECF0E /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1963074B3E9000ECF0E /* ScheduleRepository.swift */; };
+		55E1A19D3074B4E6000ECF0E /* ShiftClash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A19B3074B4E6000ECF0E /* ShiftClash.xcdatamodeld */; };
+		55E1A19E3074B4E6000ECF0E /* ShiftClash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A19B3074B4E6000ECF0E /* ShiftClash.xcdatamodeld */; };
+		55E1A19F3074B4E6000ECF0E /* ShiftClash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A19B3074B4E6000ECF0E /* ShiftClash.xcdatamodeld */; };
+		55E1A1A03074B4E6000ECF0E /* ShiftClash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A19B3074B4E6000ECF0E /* ShiftClash.xcdatamodeld */; };
+		55E1A1A23074BADE000ECF0E /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A13074BADE000ECF0E /* PersistenceController.swift */; };
+		55E1A1A33074BADE000ECF0E /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A13074BADE000ECF0E /* PersistenceController.swift */; };
+		55E1A1A43074BADE000ECF0E /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A13074BADE000ECF0E /* PersistenceController.swift */; };
+		55E1A1A53074BADE000ECF0E /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A13074BADE000ECF0E /* PersistenceController.swift */; };
+		55E1A1A73075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A63075288F000ECF0E /* CoreDataScheduleRepository.swift */; };
+		55E1A1A83075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A63075288F000ECF0E /* CoreDataScheduleRepository.swift */; };
+		55E1A1A93075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A63075288F000ECF0E /* CoreDataScheduleRepository.swift */; };
+		55E1A1AA3075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A63075288F000ECF0E /* CoreDataScheduleRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +107,15 @@
 		55E1A15830732F33000ECF0E /* ShiftClashWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiftClashWidgetExtension.entitlements; sourceTree = "<group>"; };
 		55E1A15D30732F5B000ECF0E /* ShiftClashShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiftClashShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E1A17330733282000ECF0E /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		55E1A17D307335BD000ECF0E /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		55E1A18230733675000ECF0E /* AssessmentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentTask.swift; sourceTree = "<group>"; };
+		55E1A187307336C3000ECF0E /* RosteredShift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosteredShift.swift; sourceTree = "<group>"; };
+		55E1A18C30733706000ECF0E /* DeadlineClash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineClash.swift; sourceTree = "<group>"; };
+		55E1A19130733786000ECF0E /* SharedRosterMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedRosterMessage.swift; sourceTree = "<group>"; };
+		55E1A1963074B3E9000ECF0E /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
+		55E1A19C3074B4E6000ECF0E /* ShiftClash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShiftClash.xcdatamodel; sourceTree = "<group>"; };
+		55E1A1A13074BADE000ECF0E /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		55E1A1A63075288F000ECF0E /* CoreDataScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataScheduleRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -205,6 +250,11 @@
 		55E1A16E307331E6000ECF0E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				55E1A17D307335BD000ECF0E /* Subject.swift */,
+				55E1A18230733675000ECF0E /* AssessmentTask.swift */,
+				55E1A187307336C3000ECF0E /* RosteredShift.swift */,
+				55E1A18C30733706000ECF0E /* DeadlineClash.swift */,
+				55E1A19130733786000ECF0E /* SharedRosterMessage.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -212,6 +262,9 @@
 		55E1A16F307331F6000ECF0E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				55E1A19B3074B4E6000ECF0E /* ShiftClash.xcdatamodeld */,
+				55E1A1A13074BADE000ECF0E /* PersistenceController.swift */,
+				55E1A1A63075288F000ECF0E /* CoreDataScheduleRepository.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -219,6 +272,7 @@
 		55E1A17030733200000ECF0E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				55E1A1963074B3E9000ECF0E /* ScheduleRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -411,13 +465,31 @@
 		55E1A0F93071DCB4000ECF0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				55E1A1973074B3E9000ECF0E /* ScheduleRepository.swift in Sources */,
+				55E1A17F307335BD000ECF0E /* Subject.swift in Sources */,
+				55E1A1A03074B4E6000ECF0E /* ShiftClash.xcdatamodeld in Sources */,
+				55E1A18630733675000ECF0E /* AssessmentTask.swift in Sources */,
+				55E1A1A23074BADE000ECF0E /* PersistenceController.swift in Sources */,
+				55E1A18F30733706000ECF0E /* DeadlineClash.swift in Sources */,
+				55E1A189307336C3000ECF0E /* RosteredShift.swift in Sources */,
 				55E1A17430733282000ECF0E /* AppGroup.swift in Sources */,
+				55E1A1AA3075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */,
+				55E1A19230733786000ECF0E /* SharedRosterMessage.swift in Sources */,
 			);
 		};
 		55E1A1063071DCB5000ECF0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				55E1A19A3074B3E9000ECF0E /* ScheduleRepository.swift in Sources */,
+				55E1A19530733786000ECF0E /* SharedRosterMessage.swift in Sources */,
+				55E1A18430733675000ECF0E /* AssessmentTask.swift in Sources */,
+				55E1A19D3074B4E6000ECF0E /* ShiftClash.xcdatamodeld in Sources */,
+				55E1A18B307336C3000ECF0E /* RosteredShift.swift in Sources */,
+				55E1A18D30733706000ECF0E /* DeadlineClash.swift in Sources */,
+				55E1A1A83075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */,
+				55E1A180307335BD000ECF0E /* Subject.swift in Sources */,
 				55E1A17530733282000ECF0E /* AppGroup.swift in Sources */,
+				55E1A1A33074BADE000ECF0E /* PersistenceController.swift in Sources */,
 			);
 		};
 		55E1A1103071DCB5000ECF0E /* Sources */ = {
@@ -428,13 +500,31 @@
 		55E1A13A30732F0A000ECF0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				55E1A19F3074B4E6000ECF0E /* ShiftClash.xcdatamodeld in Sources */,
+				55E1A1993074B3E9000ECF0E /* ScheduleRepository.swift in Sources */,
+				55E1A19030733706000ECF0E /* DeadlineClash.swift in Sources */,
 				55E1A17630733282000ECF0E /* AppGroup.swift in Sources */,
+				55E1A18330733675000ECF0E /* AssessmentTask.swift in Sources */,
+				55E1A19330733786000ECF0E /* SharedRosterMessage.swift in Sources */,
+				55E1A18A307336C3000ECF0E /* RosteredShift.swift in Sources */,
+				55E1A1A93075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */,
+				55E1A1A53074BADE000ECF0E /* PersistenceController.swift in Sources */,
+				55E1A17E307335BD000ECF0E /* Subject.swift in Sources */,
 			);
 		};
 		55E1A15930732F5B000ECF0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				55E1A1983074B3E9000ECF0E /* ScheduleRepository.swift in Sources */,
+				55E1A19430733786000ECF0E /* SharedRosterMessage.swift in Sources */,
+				55E1A18530733675000ECF0E /* AssessmentTask.swift in Sources */,
+				55E1A19E3074B4E6000ECF0E /* ShiftClash.xcdatamodeld in Sources */,
+				55E1A188307336C3000ECF0E /* RosteredShift.swift in Sources */,
+				55E1A18E30733706000ECF0E /* DeadlineClash.swift in Sources */,
+				55E1A1A73075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */,
+				55E1A181307335BD000ECF0E /* Subject.swift in Sources */,
 				55E1A17730733282000ECF0E /* AppGroup.swift in Sources */,
+				55E1A1A43074BADE000ECF0E /* PersistenceController.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */
@@ -912,6 +1002,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55E1A19B3074B4E6000ECF0E /* ShiftClash.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55E1A19C3074B4E6000ECF0E /* ShiftClash.xcdatamodel */,
+			);
+			currentVersion = 55E1A19C3074B4E6000ECF0E /* ShiftClash.xcdatamodel */;
+			path = ShiftClash.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 55E1A0F53071DCB4000ECF0E /* Project object */;
 	validationLevel = 1;
