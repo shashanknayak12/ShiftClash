@@ -57,6 +57,9 @@ struct RosterInboxView: View {
             .listStyle(.insetGrouped)
             .navigationTitle("Roster Inbox")
             .onAppear(perform: viewModel.load)
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+                viewModel.load()
+            }
             .sheet(item: $messageToTurnIntoShift) { message in
                 AddShiftView(repository: repository, initialNote: message.text) {
                     viewModel.dismiss(message)
