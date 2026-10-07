@@ -16,20 +16,33 @@ final class AddShiftViewModel: ObservableObject {
     @Published var endsAt: Date
     @Published var note: String
     @Published var errorMessage: String?
+    let isEditing: Bool
 
     private let addShift: AddRosteredShift
+    private let shiftID: UUID
 
-    init(repository: ScheduleRepository, initialNote: String = "") {
+    init(repository: ScheduleRepository, editing shift: RosteredShift? = nil, initialNote: String = "") {
         self.addShift = AddRosteredShift(repository: repository)
-        let now = Date()
-        self.workplace = ""
-        self.startsAt = now
-        self.endsAt = now.addingTimeInterval(4 * 60 * 60)
-        self.note = initialNote
+        if let shift {
+            self.shiftID = shift.id
+            self.workplace = shift.workplace
+            self.startsAt = shift.startsAt
+            self.endsAt = shift.endsAt
+            self.note = shift.note
+            self.isEditing = true
+        } else {
+            self.shiftID = UUID()
+            let now = Date()
+            self.workplace = ""
+            self.startsAt = now
+            self.endsAt = now.addingTimeInterval(4 * 60 * 60)
+            self.note = initialNote
+            self.isEditing = false
+        }
     }
 
     func save() -> Bool {
-        let shift = RosteredShift(id: UUID(), workplace: workplace, startsAt: startsAt, endsAt: endsAt, note: note)
+        let shift = RosteredShift(id: shiftID, workplace: workplace, startsAt: startsAt, endsAt: endsAt, note: note)
         do {
             try addShift.execute(shift)
             WidgetCenter.shared.reloadAllTimelines()

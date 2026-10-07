@@ -29,25 +29,32 @@ struct RosterInboxView: View {
                     )
                 } else {
                     ForEach(viewModel.messages) { message in
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(message.text)
+                        VStack(alignment: .leading, spacing: 8) {
+                            Label(message.text, systemImage: "text.bubble.fill")
+                                .labelStyle(.titleAndIcon)
                             Text(message.receivedAt, format: .dateTime.day().month().hour().minute())
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
                             HStack {
-                                Button("Turn into Shift") {
+                                Button {
                                     messageToTurnIntoShift = message
+                                } label: {
+                                    Label("Turn into Shift", systemImage: "briefcase.fill")
                                 }
                                 .buttonStyle(.borderedProminent)
-                                Button("Dismiss", role: .destructive) {
+                                Button(role: .destructive) {
                                     viewModel.dismiss(message)
+                                } label: {
+                                    Label("Dismiss", systemImage: "xmark")
                                 }
+                                .buttonStyle(.bordered)
                             }
                         }
-                        .padding(.vertical, 4)
+                        .padding(.vertical, 6)
                     }
                 }
             }
+            .listStyle(.insetGrouped)
             .navigationTitle("Roster Inbox")
             .onAppear(perform: viewModel.load)
             .sheet(item: $messageToTurnIntoShift) { message in

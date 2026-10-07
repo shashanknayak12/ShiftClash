@@ -23,36 +23,44 @@ struct SubjectsView: View {
                 if viewModel.subjects.isEmpty {
                     ContentUnavailableView(
                         "No subjects yet.",
-                        systemImage: "book",
+                        systemImage: "book.closed",
                         description: Text("Add a subject to start scheduling assessment tasks.")
                     )
                 } else {
                     ForEach(viewModel.subjects) { subject in
-                        Section(subject.name) {
+                        Section {
                             if viewModel.tasks(for: subject).isEmpty {
                                 Text("No assessment tasks yet.")
                                     .foregroundStyle(.secondary)
                             } else {
                                 ForEach(viewModel.tasks(for: subject)) { task in
-                                    VStack(alignment: .leading) {
-                                        Text(task.title)
-                                        Text("Due \(task.dueDate.formatted(date: .abbreviated, time: .omitted)) · \(task.weightPercent)%")
-                                            .font(.caption)
-                                            .foregroundStyle(.secondary)
+                                    HStack {
+                                        Image(systemName: task.isSubmitted ? "checkmark.seal.fill" : "doc.text.fill")
+                                            .foregroundStyle(task.isSubmitted ? .green : .blue)
+                                        VStack(alignment: .leading) {
+                                            Text(task.title)
+                                            Text("Due \(task.dueDate.formatted(date: .abbreviated, time: .omitted)) · \(task.weightPercent)%")
+                                                .font(.caption)
+                                                .foregroundStyle(.secondary)
+                                        }
                                     }
                                 }
                             }
+                        } header: {
+                            Label(subject.name, systemImage: "book.closed.fill")
                         }
                     }
                 }
             }
+            .listStyle(.insetGrouped)
             .navigationTitle("Subjects")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         showingAddSubject = true
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title2)
                     }
                 }
             }

@@ -11,6 +11,8 @@ struct ThisWeekView: View {
     @StateObject private var viewModel: ThisWeekViewModel
     @State private var showingAddShift = false
     @State private var showingAddTask = false
+    @State private var shiftToEdit: RosteredShift?
+    @State private var taskToEdit: AssessmentTask?
 
     private let repository: ScheduleRepository
 
@@ -24,12 +26,9 @@ struct ThisWeekView: View {
             List {
                 if let hours = viewModel.headlineFreeStudyHours {
                     Section {
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("\(hours, specifier: "%.1f") free study hours")
-                                .font(.title2.bold())
-                            Text("before your next clashing deadline")
-                                .foregroundStyle(.secondary)
-                        }
+                        headlineCard(hours: hours)
+                            .listRowInsets(EdgeInsets())
+                            .listRowBackground(Color.clear)
                     }
                 }
 
@@ -52,14 +51,16 @@ struct ThisWeekView: View {
                     }
                 }
             }
+            .listStyle(.insetGrouped)
             .navigationTitle("This Week")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
-                        Button("Add Shift") { showingAddShift = true }
-                        Button("Add Assessment Task") { showingAddTask = true }
+                        Button("Add Shift", systemImage: "briefcase") { showingAddShift = true }
+                        Button("Add Assessment Task", systemImage: "doc.text") { showingAddTask = true }
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title2)
                     }
                 }
             }
@@ -69,8 +70,37 @@ struct ThisWeekView: View {
             .sheet(isPresented: $showingAddTask, onDismiss: viewModel.load) {
                 AddAssessmentTaskView(repository: repository)
             }
+            .sheet(item: $shiftToEdit, onDismiss: viewModel.load) { shift in
+                AddShiftView(repository: repository, editing: shift)
+            }
+            .sheet(item: $taskToEdit, onDismiss: viewModel.load) { task in
+                AddAssessmentTaskView(repository: repository, editing: task)
+            }
             .onAppear(perform: viewModel.load)
         }
+    }
+
+    private func headlineCard(hours: Double) -> some View {
+        let isTight = hours < 5
+        return VStack(alignment: .leading, spacing: 6) {
+            Label("\(hours, specifier: "%.1f") free study hours", systemImage: isTight ? "exclamationmark.triangle.fill" : "checkmark.circle.fill")
+                .font(.title2.bold())
+            Text("before your next clashing deadline")
+                .font(.subheadline)
+                .foregroundStyle(.white.opacity(0.85))
+        }
+        .foregroundStyle(.white)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .background(
+            LinearGradient(
+                colors: isTight ? [.red, .orange] : [.indigo, .blue],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .padding(.vertical, 6)
     }
 
     @ViewBuilder
@@ -82,22 +112,39 @@ struct ThisWeekView: View {
                 shiftLabel(shift, isClash: true)
             }
         } else {
-            shiftLabel(shift, isClash: false)
+            Button {
+                shiftToEdit = shift
+            } label: {
+                shiftLabel(shift, isClash: false)
+            }
+            .buttonStyle(.plain)
         }
     }
 
     private func shiftLabel(_ shift: RosteredShift, isClash: Bool) -> some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text(shift.workplace).bold()
-                if isClash {
-                    Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(.orange)
+        HStack(spacing: 12) {
+            Image(systemName: "briefcase.fill")
+                .font(.title3)
+                .foregroundStyle(.white)
+                .frame(width: 36, height: 36)
+                .background(isClash ? Color.orange : Color.indigo)
+                .clipShape(Circle())
+
+            VStack(alignment: .leading, spacing: 2) {
+                HStack {
+                    Text(shift.workplace).bold()
+                    if isClash {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .foregroundStyle(.orange)
+                            .font(.caption)
+                    }
                 }
+                Text(shift.startsAt, format: .dateTime.weekday(.wide).hour().minute())
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
             }
-            Text(shift.startsAt, format: .dateTime.weekday(.wide).hour().minute())
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
         }
+        .padding(.vertical, 4)
     }
 
     @ViewBuilder
@@ -109,21 +156,38 @@ struct ThisWeekView: View {
                 taskLabel(task, isClash: true)
             }
         } else {
-            taskLabel(task, isClash: false)
+            Button {
+                taskToEdit = task
+            } label: {
+                taskLabel(task, isClash: false)
+            }
+            .buttonStyle(.plain)
         }
     }
 
     private func taskLabel(_ task: AssessmentTask, isClash: Bool) -> some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text(task.title).bold()
-                if isClash {
-                    Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(.orange)
+        HStack(spacing: 12) {
+            Image(systemName: task.isSubmitted ? "checkmark.seal.fill" : "doc.text.fill")
+                .font(.title3)
+                .foregroundStyle(.white)
+                .frame(width: 36, height: 36)
+                .background(task.isSubmitted ? Color.green : (isClash ? Color.orange : Color.blue))
+                .clipShape(Circle())
+
+            VStack(alignment: .leading, spacing: 2) {
+                HStack {
+                    Text(task.title).bold()
+                    if isClash {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .foregroundStyle(.orange)
+                            .font(.caption)
+                    }
                 }
+                Text("Due \(task.dueDate.formatted(date: .abbreviated, time: .shortened))")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
             }
-            Text("Due \(task.dueDate.formatted(date: .abbreviated, time: .shortened))")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
         }
+        .padding(.vertical, 4)
     }
 }

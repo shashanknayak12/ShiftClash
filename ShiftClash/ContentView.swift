@@ -22,6 +22,8 @@ struct ContentView: View {
             RosterInboxView(repository: repository, inboxStore: inboxStore)
                 .tabItem { Label("Roster Inbox", systemImage: "tray") }
         }
+        .tint(.indigo)
+        .fontDesign(.rounded)
     }
 }
 

@@ -11,26 +11,28 @@ struct AddAssessmentTaskView: View {
     @StateObject private var viewModel: AddAssessmentTaskViewModel
     @Environment(\.dismiss) private var dismiss
 
-    init(repository: ScheduleRepository) {
-        _viewModel = StateObject(wrappedValue: AddAssessmentTaskViewModel(repository: repository))
+    init(repository: ScheduleRepository, editing task: AssessmentTask? = nil) {
+        _viewModel = StateObject(wrappedValue: AddAssessmentTaskViewModel(repository: repository, editing: task))
     }
 
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Title", text: $viewModel.title)
+                Section("Task Details") {
+                    TextField("Title", text: $viewModel.title)
 
-                Picker("Subject", selection: $viewModel.selectedSubjectID) {
-                    ForEach(viewModel.subjects) { subject in
-                        Text(subject.name).tag(Optional(subject.id))
+                    Picker("Subject", selection: $viewModel.selectedSubjectID) {
+                        ForEach(viewModel.subjects) { subject in
+                            Text(subject.name).tag(Optional(subject.id))
+                        }
                     }
+
+                    DatePicker("Due Date", selection: $viewModel.dueDate)
+
+                    Stepper("Weight: \(viewModel.weightPercent)%", value: $viewModel.weightPercent, in: 1...100)
                 }
-
-                DatePicker("Due Date", selection: $viewModel.dueDate)
-
-                Stepper("Weight: \(viewModel.weightPercent)%", value: $viewModel.weightPercent, in: 1...100)
             }
-            .navigationTitle("Add Assessment Task")
+            .navigationTitle(viewModel.isEditing ? "Edit Assessment Task" : "Add Assessment Task")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { dismiss() }
@@ -41,6 +43,7 @@ struct AddAssessmentTaskView: View {
                             dismiss()
                         }
                     }
+                    .fontWeight(.semibold)
                 }
             }
             .onAppear(perform: viewModel.loadSubjects)

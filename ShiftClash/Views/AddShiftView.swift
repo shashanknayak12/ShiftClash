@@ -12,20 +12,22 @@ struct AddShiftView: View {
     @Environment(\.dismiss) private var dismiss
     var onSaved: (() -> Void)?
 
-    init(repository: ScheduleRepository, initialNote: String = "", onSaved: (() -> Void)? = nil) {
-        _viewModel = StateObject(wrappedValue: AddShiftViewModel(repository: repository, initialNote: initialNote))
+    init(repository: ScheduleRepository, editing shift: RosteredShift? = nil, initialNote: String = "", onSaved: (() -> Void)? = nil) {
+        _viewModel = StateObject(wrappedValue: AddShiftViewModel(repository: repository, editing: shift, initialNote: initialNote))
         self.onSaved = onSaved
     }
 
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Workplace", text: $viewModel.workplace)
-                DatePicker("Starts", selection: $viewModel.startsAt)
-                DatePicker("Ends", selection: $viewModel.endsAt)
-                TextField("Note", text: $viewModel.note)
+                Section("Shift Details") {
+                    TextField("Workplace", text: $viewModel.workplace)
+                    DatePicker("Starts", selection: $viewModel.startsAt)
+                    DatePicker("Ends", selection: $viewModel.endsAt)
+                    TextField("Note", text: $viewModel.note)
+                }
             }
-            .navigationTitle("Add Shift")
+            .navigationTitle(viewModel.isEditing ? "Edit Shift" : "Add Shift")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { dismiss() }
@@ -37,9 +39,10 @@ struct AddShiftView: View {
                             dismiss()
                         }
                     }
+                    .fontWeight(.semibold)
                 }
             }
-            .alert("Could not add this shift", isPresented: .constant(viewModel.errorMessage != nil), actions: {
+            .alert("Could not save this shift", isPresented: .constant(viewModel.errorMessage != nil), actions: {
                 Button("OK") { viewModel.errorMessage = nil }
             }, message: {
                 Text(viewModel.errorMessage ?? "")

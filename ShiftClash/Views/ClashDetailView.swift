@@ -19,31 +19,53 @@ struct ClashDetailView: View {
 
     var body: some View {
         List {
-            Section("Shift") {
-                Text(viewModel.clash.shift.workplace).bold()
-                Text(viewModel.clash.shift.startsAt, format: .dateTime.weekday(.wide).hour().minute())
-                    .foregroundStyle(.secondary)
-            }
-
-            Section("Deadline") {
-                Text(viewModel.clash.task.title).bold()
-                Text("Due \(viewModel.clash.task.dueDate.formatted(date: .abbreviated, time: .shortened))")
-                    .foregroundStyle(.secondary)
+            Section {
+                Label {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(viewModel.clash.shift.workplace).bold()
+                        Text(viewModel.clash.shift.startsAt, format: .dateTime.weekday(.wide).hour().minute())
+                            .foregroundStyle(.secondary)
+                    }
+                } icon: {
+                    Image(systemName: "briefcase.fill")
+                        .foregroundStyle(.indigo)
+                }
+            } header: {
+                Text("Shift")
             }
 
             Section {
-                Text("\(viewModel.clash.freeStudyHours, specifier: "%.1f") free study hours before this deadline")
+                Label {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(viewModel.clash.task.title).bold()
+                        Text("Due \(viewModel.clash.task.dueDate.formatted(date: .abbreviated, time: .shortened))")
+                            .foregroundStyle(.secondary)
+                    }
+                } icon: {
+                    Image(systemName: "doc.text.fill")
+                        .foregroundStyle(.blue)
+                }
+            } header: {
+                Text("Deadline")
+            }
+
+            Section {
+                Label("\(viewModel.clash.freeStudyHours, specifier: "%.1f") free study hours before this deadline", systemImage: "clock.fill")
                     .font(.headline)
+                    .foregroundStyle(.orange)
             }
 
             if !viewModel.clash.task.isSubmitted {
                 Section {
-                    Button("Mark as Submitted") {
+                    Button {
                         viewModel.markAsSubmitted()
+                    } label: {
+                        Label("Mark as Submitted", systemImage: "checkmark.circle.fill")
                     }
                 }
             }
         }
+        .listStyle(.insetGrouped)
         .navigationTitle("Deadline Clash")
         .alert("Could not update this task", isPresented: .constant(viewModel.errorMessage != nil), actions: {
             Button("OK") { viewModel.errorMessage = nil }
