@@ -12,6 +12,5 @@ import SwiftUI
 struct ShiftClashWidgetBundle: WidgetBundle {
     var body: some Widget {
         ShiftClashWidget()
-        ShiftClashWidgetControl()
     }
 }
