@@ -51,6 +51,10 @@
 		55E1A1A83075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A63075288F000ECF0E /* CoreDataScheduleRepository.swift */; };
 		55E1A1A93075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A63075288F000ECF0E /* CoreDataScheduleRepository.swift */; };
 		55E1A1AA3075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A1A63075288F000ECF0E /* CoreDataScheduleRepository.swift */; };
+		55E1A28A30761741000ECF0E /* SharedInboxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A28930761741000ECF0E /* SharedInboxStore.swift */; };
+		55E1A28B30761741000ECF0E /* SharedInboxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A28930761741000ECF0E /* SharedInboxStore.swift */; };
+		55E1A28C30761741000ECF0E /* SharedInboxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A28930761741000ECF0E /* SharedInboxStore.swift */; };
+		55E1A28D30761741000ECF0E /* SharedInboxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E1A28930761741000ECF0E /* SharedInboxStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,7 @@
 		55E1A19C3074B4E6000ECF0E /* ShiftClash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShiftClash.xcdatamodel; sourceTree = "<group>"; };
 		55E1A1A13074BADE000ECF0E /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		55E1A1A63075288F000ECF0E /* CoreDataScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataScheduleRepository.swift; sourceTree = "<group>"; };
+		55E1A28930761741000ECF0E /* SharedInboxStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedInboxStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -294,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				55E1A1963074B3E9000ECF0E /* ScheduleRepository.swift */,
+				55E1A28930761741000ECF0E /* SharedInboxStore.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -494,6 +500,7 @@
 				55E1A18F30733706000ECF0E /* DeadlineClash.swift in Sources */,
 				55E1A189307336C3000ECF0E /* RosteredShift.swift in Sources */,
 				55E1A17430733282000ECF0E /* AppGroup.swift in Sources */,
+				55E1A28C30761741000ECF0E /* SharedInboxStore.swift in Sources */,
 				55E1A1AA3075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */,
 				55E1A19230733786000ECF0E /* SharedRosterMessage.swift in Sources */,
 			);
@@ -510,6 +517,7 @@
 				55E1A1A83075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */,
 				55E1A180307335BD000ECF0E /* Subject.swift in Sources */,
 				55E1A17530733282000ECF0E /* AppGroup.swift in Sources */,
+				55E1A28A30761741000ECF0E /* SharedInboxStore.swift in Sources */,
 				55E1A1A33074BADE000ECF0E /* PersistenceController.swift in Sources */,
 			);
 		};
@@ -525,6 +533,7 @@
 				55E1A1993074B3E9000ECF0E /* ScheduleRepository.swift in Sources */,
 				55E1A19030733706000ECF0E /* DeadlineClash.swift in Sources */,
 				55E1A17630733282000ECF0E /* AppGroup.swift in Sources */,
+				55E1A28B30761741000ECF0E /* SharedInboxStore.swift in Sources */,
 				55E1A18330733675000ECF0E /* AssessmentTask.swift in Sources */,
 				55E1A19330733786000ECF0E /* SharedRosterMessage.swift in Sources */,
 				55E1A18A307336C3000ECF0E /* RosteredShift.swift in Sources */,
@@ -540,6 +549,7 @@
 				55E1A19430733786000ECF0E /* SharedRosterMessage.swift in Sources */,
 				55E1A18530733675000ECF0E /* AssessmentTask.swift in Sources */,
 				55E1A19E3074B4E6000ECF0E /* ShiftClash.xcdatamodeld in Sources */,
+				55E1A28D30761741000ECF0E /* SharedInboxStore.swift in Sources */,
 				55E1A188307336C3000ECF0E /* RosteredShift.swift in Sources */,
 				55E1A18E30733706000ECF0E /* DeadlineClash.swift in Sources */,
 				55E1A1A73075288F000ECF0E /* CoreDataScheduleRepository.swift in Sources */,
