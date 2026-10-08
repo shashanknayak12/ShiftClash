@@ -30,8 +30,16 @@ struct RosterInboxView: View {
                 } else {
                     ForEach(viewModel.messages) { message in
                         VStack(alignment: .leading, spacing: 8) {
-                            Label(message.text, systemImage: "text.bubble.fill")
-                                .labelStyle(.titleAndIcon)
+                            Label {
+                                Text(message.text)
+                            } icon: {
+                                Image(systemName: "text.bubble.fill")
+                                    .foregroundStyle(.white)
+                                    .frame(width: 28, height: 28)
+                                    .background(Color.purple)
+                                    .clipShape(Circle())
+                                    .shadow(color: .purple.opacity(0.35), radius: 3, y: 2)
+                            }
                             Text(message.receivedAt, format: .dateTime.day().month().hour().minute())
                                 .font(.caption)
                                 .foregroundStyle(.secondary)

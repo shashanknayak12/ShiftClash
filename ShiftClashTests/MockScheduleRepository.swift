@@ -41,6 +41,10 @@ final class MockScheduleRepository: ScheduleRepository {
         }
     }
 
+    func remove(_ task: AssessmentTask) throws {
+        tasksList.removeAll { $0.id == task.id }
+    }
+
     func rosteredShifts() throws -> [RosteredShift] {
         shiftsList
     }
