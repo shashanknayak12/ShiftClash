@@ -1,10 +1,10 @@
 # ShiftClash
 
-An iOS app that helps a full-time university student working casual rostered shifts spot when a shift lands inside the 48 hours before an assignment is due — before it's too late to do anything about it.
+An iOS app that helps a full-time university student working casual rostered shifts spot when a shift lands inside the 48 hours before an assignment is due  before it's too late to do anything about it.
 
 ## Domain context
 
-Casual retail and hospitality shifts in Australia are often published with as little as 24–48 hours' notice. A student juggling a roster and assignment deadlines can easily miss that a shift collides with a deadline until the night before. ShiftClash stores the student's rostered shifts and assessment tasks, automatically detects when a shift falls inside the 48-hour window before an unsubmitted deadline, and shows how many free study hours are actually left.
+Casual retail and hospitality shifts in Australia are often published with as little as 24–48 hours notice. A student juggling a roster and assignment deadlines can easily miss that a shift collides with a deadline until the night before. ShiftClash stores the student's rostered shifts and assessment tasks, automatically detects when a shift falls inside the 48-hour window before an unsubmitted deadline, and shows how many free study hours are actually left.
 
 ## Architecture
 
@@ -44,4 +44,4 @@ Schema: `Subject` has many `AssessmentTask` (cascade delete), `AssessmentTask` b
 
 ## Tests
 
-9 unit tests in `ShiftClashTests`, using `MockScheduleRepository` (in-memory, no Core Data), covering happy paths, boundary conditions, and domain error cases for all 4 Use Cases.
+9 unit tests in `ShiftClashTests`, using `MockScheduleRepository` (in-memory, no Core Data), covering boundary conditions, and domain error cases for all 4 Use Cases.
