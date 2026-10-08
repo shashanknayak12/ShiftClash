@@ -17,6 +17,7 @@ protocol ScheduleRepository {
     // Tasks due in a date range that have not been submitted yet.
     func unsubmittedTasks(dueBetween start: Date, and end: Date) throws -> [AssessmentTask]
     func save(_ task: AssessmentTask) throws
+    func remove(_ task: AssessmentTask) throws
 
     func rosteredShifts() throws -> [RosteredShift]
     // Shifts that fall inside a given time window.

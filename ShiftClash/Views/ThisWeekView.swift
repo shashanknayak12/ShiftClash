@@ -111,6 +111,12 @@ struct ThisWeekView: View {
             } label: {
                 shiftLabel(shift, isClash: true)
             }
+            .listRowBackground(Color.orange.opacity(0.1))
+            .swipeActions(edge: .trailing) {
+                Button("Delete", systemImage: "trash", role: .destructive) {
+                    viewModel.deleteShift(shift)
+                }
+            }
         } else {
             Button {
                 shiftToEdit = shift
@@ -118,6 +124,11 @@ struct ThisWeekView: View {
                 shiftLabel(shift, isClash: false)
             }
             .buttonStyle(.plain)
+            .swipeActions(edge: .trailing) {
+                Button("Delete", systemImage: "trash", role: .destructive) {
+                    viewModel.deleteShift(shift)
+                }
+            }
         }
     }
 
@@ -129,6 +140,7 @@ struct ThisWeekView: View {
                 .frame(width: 36, height: 36)
                 .background(isClash ? Color.orange : Color.indigo)
                 .clipShape(Circle())
+                .shadow(color: (isClash ? Color.orange : Color.indigo).opacity(0.35), radius: 4, y: 2)
 
             VStack(alignment: .leading, spacing: 2) {
                 HStack {
@@ -155,6 +167,12 @@ struct ThisWeekView: View {
             } label: {
                 taskLabel(task, isClash: true)
             }
+            .listRowBackground(Color.orange.opacity(0.1))
+            .swipeActions(edge: .trailing) {
+                Button("Delete", systemImage: "trash", role: .destructive) {
+                    viewModel.deleteTask(task)
+                }
+            }
         } else {
             Button {
                 taskToEdit = task
@@ -162,6 +180,12 @@ struct ThisWeekView: View {
                 taskLabel(task, isClash: false)
             }
             .buttonStyle(.plain)
+            .listRowBackground(task.isSubmitted ? Color.green.opacity(0.08) : Color(.secondarySystemGroupedBackground))
+            .swipeActions(edge: .trailing) {
+                Button("Delete", systemImage: "trash", role: .destructive) {
+                    viewModel.deleteTask(task)
+                }
+            }
         }
     }
 
@@ -173,6 +197,7 @@ struct ThisWeekView: View {
                 .frame(width: 36, height: 36)
                 .background(task.isSubmitted ? Color.green : (isClash ? Color.orange : Color.blue))
                 .clipShape(Circle())
+                .shadow(color: (task.isSubmitted ? Color.green : (isClash ? Color.orange : Color.blue)).opacity(0.35), radius: 4, y: 2)
 
             VStack(alignment: .leading, spacing: 2) {
                 HStack {

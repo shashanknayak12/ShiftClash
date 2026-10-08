@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import WidgetKit
 
 @MainActor
 final class ThisWeekViewModel: ObservableObject {
@@ -34,6 +35,26 @@ final class ThisWeekViewModel: ObservableObject {
             clashes = try detectClashes.execute()
         } catch {
             errorMessage = "Could not load your roster and deadlines. Pull to refresh to try again."
+        }
+    }
+
+    func deleteShift(_ shift: RosteredShift) {
+        do {
+            try repository.remove(shift)
+            WidgetCenter.shared.reloadAllTimelines()
+            load()
+        } catch {
+            errorMessage = "Could not remove this shift. Try again."
+        }
+    }
+
+    func deleteTask(_ task: AssessmentTask) {
+        do {
+            try repository.remove(task)
+            WidgetCenter.shared.reloadAllTimelines()
+            load()
+        } catch {
+            errorMessage = "Could not remove this task. Try again."
         }
     }
 }

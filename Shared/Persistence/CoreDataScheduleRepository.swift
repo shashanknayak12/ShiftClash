@@ -86,6 +86,15 @@ final class CoreDataScheduleRepository: ScheduleRepository {
         try context.save()
     }
 
+    func remove(_ task: AssessmentTask) throws {
+        let request = AssessmentTaskEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %@", task.id as CVarArg)
+        request.fetchLimit = 1
+        guard let entity = try context.fetch(request).first else { return }
+        context.delete(entity)
+        try context.save()
+    }
+
     // Rostered shifts
 
     func rosteredShifts() throws -> [RosteredShift] {
